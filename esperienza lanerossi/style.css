@@ -1,0 +1,36 @@
+/* * style.css
+ * Foglio di stile personalizzato per Masterclass Lanerossi
+ * Contiene importazione font, animazioni e utility non gestite da Tailwind
+ */
+
+/* 1. Importazione Font Google (Merriweather) */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+/* 2. Impostazioni Base */
+body {
+    font-family: 'Merriweather', serif;
+    /* Assicura che il font venga applicato sopra i default di Tailwind */
+}
+
+/* 3. Classi di Utilità */
+.hidden {
+    display: none;
+}
+
+/* 4. Animazioni */
+/* Classe per l'animazione di entrata */
+.fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Definizione keyframes dell'animazione */
+@keyframes fadeIn {
+    from { 
+        opacity: 0; 
+        transform: translateY(10px); 
+    }
+    to { 
+        opacity: 1; 
+        transform: translateY(0); 
+    }
+}

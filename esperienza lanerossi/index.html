@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masterclass Sonno Lanerossi</title>
+    
+    <!-- Collegamento al Foglio di Stile Esterno -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Tailwind CSS (Framework per lo stile) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons (Libreria icone) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="min-h-screen bg-stone-100 flex items-center justify-center p-4 text-stone-800">
+
+    <!-- Container Principale -->
+    <div id="app-container" class="bg-white max-w-md w-full shadow-2xl rounded-2xl overflow-hidden transform transition-all duration-300">
+        
+        <!-- ======================= -->
+        <!-- VISTA VOLANTINO (FLYER) -->
+        <!-- ======================= -->
+        <div id="view-flyer" class="fade-in">
+            <!-- Header Immagine -->
+            <div class="relative h-72 overflow-hidden bg-stone-200">
+                <img 
+                    src="image_a17f73.jpg" 
+                    alt="Lanerossi Sleep System" 
+                    class="w-full h-full object-cover"
+                    onerror="this.src='https://placehold.co/600x400/e5e5e5/a8a29e?text=Immagine+Copertina'" 
+                />
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-gradient-to-t from-stone-900/40 via-transparent to-transparent pointer-events-none"></div>
+                
+                <!-- Logo -->
+                <div class="absolute top-4 left-0 right-0 flex justify-center p-2">
+                    <div class="bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow-md">
+                        <img src="image_a2e013.png" alt="Lanerossi Logo" class="h-8 object-contain" 
+                             onerror="this.style.display='none'; this.parentElement.innerText='LANEROSSI'"/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Corpo del Volantino -->
+            <div class="p-6 space-y-6 bg-stone-50">
+                
+                <!-- Sezione Introduttiva -->
+                <div class="text-stone-700 text-sm leading-relaxed">
+                    <h1 class="text-2xl font-bold text-stone-800 mb-3 leading-tight">
+                        Masterclass: Il Sonno Rigenerativo
+                    </h1>
+
+                    <p class="mb-2">
+                        Il sonno è la nuova frontiera del benessere. In un mondo che accelera, dormire bene è un lusso rigenerativo che merita scienza e natura.
+                    </p>
+                    <p class="font-medium text-amber-700 mb-4">
+                        Wool Energy nasce da questa visione: un ecosistema per il sonno che unisce la forza della lana Merino e l'innovazione scientifica per un riposo profondo e misurabile.
+                    </p>
+
+                    <!-- Box Experience Area -->
+                    <div class="bg-white border-l-4 border-amber-500 p-3 shadow-sm rounded-r-md">
+                        <p class="text-stone-800 font-semibold text-sm flex items-center">
+                            <i data-lucide="star" class="text-amber-500 mr-2 w-4 h-4 fill-current"></i>
+                            Experience Area
+                        </p>
+                        <p class="text-xs text-stone-600 mt-1">
+                            Durante l'evento avrai l'opportunità esclusiva di <strong>provare dal vivo</strong> i prodotti Lanerossi e testare la qualità Wool Energy.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Perché Partecipare (Benefici) -->
+                <div>
+                    <h3 class="text-lg font-bold text-stone-800 mb-3 flex items-center">
+                        <i data-lucide="moon" class="text-amber-600 mr-2 w-5 h-5"></i>
+                        Perché Partecipare
+                    </h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start text-sm text-stone-600">
+                            <div class="mt-0.5 mr-3 flex-shrink-0">
+                                <i data-lucide="feather" class="text-amber-600 w-4 h-4"></i>
+                            </div>
+                            <span>Il sonno come rituale di benessere profondo e rigenerativo.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-stone-600">
+                            <div class="mt-0.5 mr-3 flex-shrink-0">
+                                <i data-lucide="shield-check" class="text-amber-600 w-4 h-4"></i>
+                            </div>
+                            <span>Wool Energy: l'ecosistema scientifico per il sonno di Lanerossi.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-stone-600">
+                            <div class="mt-0.5 mr-3 flex-shrink-0">
+                                <i data-lucide="thermometer" class="text-amber-600 w-4 h-4"></i>
+                            </div>
+                            <span>Comfort termico e assorbimento dell'umidità grazie alla lana Merino.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-stone-600">
+                            <div class="mt-0.5 mr-3 flex-shrink-0">
+                                <i data-lucide="activity" class="text-amber-600 w-4 h-4"></i>
+                            </div>
+                            <span>Sostegno ergonomico e rilassamento profondo con memory e grafite.</span>
+                        </li>
+                        <li class="flex items-start text-sm text-stone-600">
+                            <div class="mt-0.5 mr-3 flex-shrink-0">
+                                <i data-lucide="moon" class="text-amber-600 w-4 h-4"></i>
+                            </div>
+                            <span>Stabilizzazione del ritmo cardiaco per un riposo continuo.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Prezzo e CTA -->
+                <div class="flex justify-between items-end">
+                    <div>
+                        <p class="text-xs text-stone-500 mb-1">Investi nel tuo benessere</p>
+                        <p class="text-3xl font-bold text-amber-700">€25.00</p>
+                    </div>
+                    <button onclick="switchView('booking')" class="bg-stone-800 hover:bg-stone-900 text-white font-bold py-3 px-6 rounded-lg shadow-md transition-colors duration-200 flex items-center space-x-2">
+                        <span>Iscriviti Ora</span>
+                        <i data-lucide="arrow-left" class="w-4 h-4 rotate-180"></i>
+                    </button>
+                </div>
+                
+                <p class="text-center text-xs text-stone-400 mt-2">
+                    *Posti limitati. L'evento include una sessione Q&A dedicata.
+                </p>
+            </div>
+        </div>
+
+        <!-- =========================== -->
+        <!-- VISTA PRENOTAZIONE (BOOKING) -->
+        <!-- =========================== -->
+        <div id="view-booking" class="hidden fade-in h-full flex flex-col">
+            <div class="bg-stone-200 p-6 text-stone-800 relative border-b border-stone-300">
+                <button onclick="switchView('flyer')" class="absolute top-6 left-4 hover:bg-stone-300 p-2 rounded-full transition-colors">
+                    <i data-lucide="arrow-left" class="w-6 h-6"></i>
+                </button>
+                <div class="flex justify-center mb-2">
+                    <img src="image_a2e013.png" alt="Lanerossi Logo" class="h-10 object-contain mix-blend-multiply" 
+                         onerror="this.style.display='none'; this.parentElement.innerText='LANEROSSI'"/>
+                </div>
+                <h2 class="text-2xl font-bold text-center mt-2">Completa la tua Iscrizione</h2>
+                <p class="text-stone-600 text-center text-sm mt-1">Unisciti alla rivoluzione del sonno.</p>
+            </div>
+
+            <div class="p-8 space-y-6 bg-white flex-grow">
+                <div class="bg-amber-50 p-4 rounded-lg border border-amber-100 text-center">
+                    <p class="text-lg font-bold text-amber-700 mb-1">30 POSTI DISPONIBILI</p>
+                    <p class="text-sm text-amber-600">PER OGNI EVENTO</p>
+                    <p class="text-sm font-bold text-stone-800 mt-2">Prezzo: €25.00</p>
+                </div>
+
+                <form class="space-y-4" onsubmit="handleBooking(event)">
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-1">Nome Completo</label>
+                        <div class="relative">
+                            <i data-lucide="user" class="absolute left-3 top-3 text-stone-400 w-4 h-4"></i>
+                            <input type="text" placeholder="Nome Cognome" class="w-full pl-10 pr-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-stone-50" required />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-1">Email</label>
+                        <div class="relative">
+                            <i data-lucide="mail" class="absolute left-3 top-3 text-stone-400 w-4 h-4"></i>
+                            <input type="email" placeholder="Yourname@email.com" class="w-full pl-10 pr-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-stone-50" required />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-stone-700 mb-1">Seleziona Data e Luogo</label>
+                        <div class="relative">
+                            <i data-lucide="calendar" class="absolute left-3 top-3 text-stone-400 w-4 h-4"></i>
+                            <select id="date-select" class="w-full pl-10 pr-4 py-2 border border-stone-300 rounded-lg focus:ring-2 focus:ring-amber-500 focus:border-amber-500 outline-none bg-stone-50 appearance-none" required>
+                                <option value="" disabled selected>Scegli una data</option>
+                                <option value="9 Maggio, Vicenza">9 Maggio, Vicenza</option>
+                                <option value="6 Giugno, Roma">6 Giugno, Roma</option>
+                                <option value="11 Luglio, Milano">11 Luglio, Milano</option>
+                                <option value="29 Agosto, Francoforte">29 Agosto, Francoforte</option>
+                            </select>
+                            <i data-lucide="arrow-left" class="absolute right-3 top-3 text-stone-400 rotate-90 pointer-events-none w-4 h-4"></i>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <button type="submit" class="w-full bg-stone-800 hover:bg-stone-900 text-white font-bold py-3 px-4 rounded-lg shadow-lg transition-colors duration-200 flex items-center justify-center space-x-2">
+                            <span>Conferma e Paga</span>
+                            <i data-lucide="credit-card" class="w-4 h-4"></i>
+                        </button>
+                        <p class="text-center text-xs text-stone-500 mt-3 flex justify-center items-center">
+                            <span class="mr-1">Pagamenti sicuri con Stripe</span>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Script Logica -->
+    <script>
+        // Inizializza le icone
+        lucide.createIcons();
+
+        // Funzione per cambiare vista (Flyer <-> Booking)
+        function switchView(viewName) {
+            const flyer = document.getElementById('view-flyer');
+            const booking = document.getElementById('view-booking');
+            
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            if (viewName === 'booking') {
+                flyer.classList.add('hidden');
+                booking.classList.remove('hidden');
+            } else {
+                booking.classList.add('hidden');
+                flyer.classList.remove('hidden');
+            }
+        }
+
+        // Funzione gestione form
+        function handleBooking(e) {
+            e.preventDefault();
+            const date = document.getElementById('date-select').value;
+            alert(`Iscrizione confermata per: ${date} (Simulazione)`);
+        }
+    </script>
+</body>
+</html>
